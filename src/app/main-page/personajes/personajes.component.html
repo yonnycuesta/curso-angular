@@ -1,0 +1,23 @@
+<div class="card">
+        <div class="card-header">
+          <h6>Super Heroes</h6>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+              <thead>
+                <th>Nombre</th>
+                <th>Poder</th>
+              </thead>
+            <tbody>
+              <!-- <tr *ngFor="let heroe of personajesHijo">
+                <td>{{ heroe.nombre }}</td>
+                <td>{{ heroe.poder | number }}</td>
+              </tr> -->
+              <tr *ngFor="let heroe of personajes">
+                <td>{{ heroe.nombre }}</td>
+                <td>{{ heroe.poder | number }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
