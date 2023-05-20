@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-form-practica',
   templateUrl: './form-practica.component.html',
   styleUrls: ['./form-practica.component.scss'],
+  providers: [MessageService],
 })
 export class FormPracticaComponent implements OnInit {
   // TODO: Temporal
@@ -32,7 +34,7 @@ export class FormPracticaComponent implements OnInit {
     username: ['', [Validators.required, this.noPuedesSerJorge]],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.miFormulario.reset({
@@ -56,6 +58,10 @@ export class FormPracticaComponent implements OnInit {
 
   load(){
     this.loading = true;
+  }
+
+  show(){
+    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
   }
 
 

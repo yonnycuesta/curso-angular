@@ -3,6 +3,7 @@
     <div class="col-6 mt-4">
       <div class="card flex justify-content-center">
         <p-card header="Validaciones Reactivas">
+          <p-toast></p-toast>
           <form
             autocomplete="off"
             [formGroup]="miFormulario"
@@ -84,10 +85,12 @@
                 <!-- <button type="submit" class="btn btn-primary float-right">
                   Crear
                 </button> -->
-                <p-button type="submit" label="Crear" [loading]="loading" (click)="load()" styleClass="p-button-success" icon="pi pi-save" class="float-right"></p-button>
+                <!-- <p-button type="submit" label="Crear" [loading]="loading" (click)="load()" styleClass="p-button-success" icon="pi pi-save" class="float-right"></p-button> -->
               </div>
             </div>
           </form>
+          <p-button type="button" label="Crear" (click)="show()" styleClass="p-button-success" icon="pi pi-save" class="float-right"></p-button>
+
         </p-card>
       </div>
     </div>

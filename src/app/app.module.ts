@@ -8,11 +8,15 @@ import { FormPracticaComponent } from './formularios/form-practica/form-practica
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import { SelectorComponent } from './selector/selector.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     UploadPageComponent,
     FormPracticaComponent,
+    SelectorComponent,
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,9 @@ import { ButtonModule } from 'primeng/button';
     HeroModule,
     ReactiveFormsModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
